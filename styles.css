@@ -3,17 +3,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
- }
- 
- body {
+}
+
+body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #000;
     background-color: #fff;
- }
- 
- /* Header 样式 */
- header {
+}
+
+/* Header 样式 */
+header {
     background: #fff;
     padding: 12px 0;
     border-bottom: 1px solid #eee;
@@ -21,108 +21,117 @@
     width: 100%;
     top: 0;
     z-index: 1000;
- }
- 
- .header-content {
+}
+
+.header-content {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 40px;
- }
- 
- .logo {
+}
+
+.logo {
     font-size: 1.2rem;
     font-weight: 700;
     margin-left: 40px;
- }
- 
- .diamond {
+}
+
+.diamond {
     font-size: 1.4rem;
     margin-right: 8px;
- }
- 
- /* 主容器 */
- .main-container {
+}
+
+/* 主容器 */
+.main-container {
     max-width: 1400px;
     margin: 60px auto 0;
     padding: 40px;
- }
- 
- /* 网格背景区域 */
- .grid-section {
+}
+
+/* 网格背景区域 */
+.grid-section {
     background-image: linear-gradient(#ddd 1px, transparent 1px),
                       linear-gradient(90deg, #ddd 1px, transparent 1px);
     background-size: 20px 20px;
     padding: 40px;
-    margin-top: -180px;
- }
- 
- /* 内容布局 */
- .content {
+    margin-top: -20px;
+}
+
+/* 内容布局 */
+.content {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     gap: 60px;
-    min-height: 600px;
- }
- 
- /* 文字部分样式 */
- .text-section {
-    width: 45%;
-    flex: 0 0 45%;
+}
+
+/* 文字部分样式 */
+.text-section {
+    flex: 1;
+    padding-right: 40px;
+    min-width: 45%;
+    max-width: 45%; /* 添加最大宽度限制 */
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding-right: 40px;
- }
- 
- .diamond-icon {
+    justify-content: center; /* 垂直居中 */
+}
+
+/* 确保段落文字换行 */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    word-wrap: break-word; /* 确保长单词换行 */
+    overflow-wrap: break-word;
+}
+
+.diamond-icon {
     font-size: 2rem;
     margin-bottom: 20px;
- }
- 
- h1 {
+}
+
+h1 {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-size: 2.5rem;
     margin-bottom: 10px;
     font-weight: 400;
- }
- 
- h2 {
+}
+
+h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     line-height: 1.2;
     margin-bottom: 20px;
- }
- 
- p {
+}
+
+p {
     font-size: 1.1rem;
     margin-bottom: 40px;
- }
- 
- /* 图片部分样式 */
- .image-section {
-    width: 45%;
-    flex: 0 0 45%;
- }
- 
- .image-section img {
+}
+
+/* 图片部分样式 */
+.image-section {
+    flex: 1;
+    max-width: 50%;
+    margin-left: auto; /* 确保图片在右侧 */
+}
+
+.image-section img {
     width: 100%;
     height: auto;
     max-width: 800px;
     margin-bottom: 20px;
     object-fit: cover;
- }
- 
- /* 社交标签样式 */
- .social-tags {
+}
+
+/* 社交标签样式 */
+.social-tags {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
- }
- 
- .tag {
+}
+
+.tag {
     background: #fff;
     border: 1px solid #000;
     border-radius: 20px;
@@ -131,84 +140,12 @@
     text-decoration: none;
     color: #000;
     transition: all 0.3s ease;
- }
- 
- .tag:hover {
+}
+
+.tag:hover {
     background: #000;
     color: #fff;
- }
- 
- /* 响应式设计 */
- @media (max-width: 768px) {
-    .header-content {
-        padding: 0 20px;
-    }
- 
-    .logo {
-        margin-left: 20px;
-    }
- 
-    .main-container {
-        padding: 20px;
-    }
- 
-    .grid-section {
-        padding: 20px;
-    }
- 
-    .content {
-        flex-direction: column;
-        gap: 40px;
-        min-height: auto;
-    }
- 
-    .text-section, 
-    .image-section {
-        width: 100%;
-        flex: none;
-    }
- 
-    .text-section {
-        padding-right: 0;
-    }
- 
-    h1, h2 {
-        font-size: 2rem;
-    }
- }
- 
- @media (max-width: 480px) {
-    .header-content {
-        padding: 0 10px;
-    }
- 
-    .logo {
-        margin-left: 10px;
-    }
- 
-    .main-container {
-        padding: 10px;
-    }
- 
-    .grid-section {
-        padding: 10px;
-    }
- 
-    h1, h2 {
-        font-size: 1.5rem;
-    }
- 
-    .social-tags {
-        gap: 8px;
-    }
- 
-    .tag {
-        padding: 4px 12px;
-        font-size: 0.8rem;
-    }
- }
-
- /* 保留之前的所有样式，在文件末尾添加以下样式 */
+}
 
 /* 文章预览部分样式 */
 .articles-section {
@@ -231,7 +168,7 @@
 
 .view-more {
     text-decoration: none;
-    color: #959494;
+    color: #000;
     font-size: 1rem;
     transition: opacity 0.3s;
 }
@@ -248,8 +185,8 @@
 
 .article-card {
     text-decoration: none;
-    color: #000000;
-    border: 1px solid #838282;
+    color: #000;
+    border: 1px solid #000;
     padding: 10px;
     transition: transform 0.3s;
 }
@@ -261,7 +198,7 @@
 .article-image {
     width: 100%;
     height: 200px;
-    background-color: #919191;
+    background-color: #000;
     background-size: cover;
     background-position: center;
     margin-bottom: 15px;
@@ -274,21 +211,85 @@
     padding: 10px 0;
 }
 
-/* 响应式设计补充 */
+/* 响应式设计 */
 @media (max-width: 768px) {
+    .header-content {
+        padding: 0 20px;
+    }
+
+    .logo {
+        margin-left: 20px;
+    }
+
+    .main-container {
+        padding: 20px;
+    }
+
+    .grid-section {
+        padding: 20px;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .text-section, 
+    .image-section {
+        flex: none;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .text-section {
+        padding-right: 0;
+        padding-top: 30px; /* 调整移动端顶部间距 */
+    }
+
     .articles-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1, h2 {
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 480px) {
+    .header-content {
+        padding: 0 10px;
+    }
+
+    .logo {
+        margin-left: 10px;
+    }
+
+    .main-container {
+        padding: 10px;
+    }
+
+    .grid-section {
+        padding: 10px;
+    }
+
+    .text-section {
+        padding-top: 20px; /* 调整移动端顶部间距 */
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
     .articles-grid {
         grid-template-columns: 1fr;
     }
-    
-    .articles-header {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+
+    .social-tags {
+        gap: 8px;
+    }
+
+    .tag {
+        padding: 4px 12px;
+        font-size: 0.8rem;
     }
 }
